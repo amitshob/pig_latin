@@ -2,31 +2,36 @@ var pigLatin = function(word) {
 
 
     var word_array = word.split("");
-    var consonant= ["b","c","d","f","g","h","j","k","m","n","p","q","r","s","t","v","x","z","w","y"]
+    var consonants = ["b","c","d","f","g","h","j","k","m","n","p","q","r","s","t","v","x","z","w","y"];
     // // return word;
-    if (word_array[0] === "a"||"e"||"i"||"o"||"u") {// if 1st letter is a vowel
 
+    if (word_array[0] === "a" || word_array[0] === "e" || word_array[0] === "i" || word_array[0] === "o" || word_array[0] === "u") {// if 1st letter is a vowel
+      // debugger;
       word_array.push("a","y");
 
       return word_array.join("");
     }
 
-    else if (consonant.indexOf(word_array[0])!== -1){ //if 1st letter is a consonant
+    else if (consonants.indexOf(word_array[0]) !== -1){ //if 1st letter is a consonant
 
+        // debugger;
 
-      for (var index= 0; word_array[index] ===  "a"||"e"||"i"||"o"||"u" ; index++){
-        word_array = word_array.push(word_array[index])
-        word_array = word_array.splice(word_array[index+1]);
+      while (word_array[0] !== "a" && word_array[0] !== "e" && word_array[0] !== "i" && word_array[0] !== "o" && word_array[0] !== "u") {
+        word_array.push(word_array[0]);
+        word_array = word_array.splice(1);
+      }
 
-        }
-       word_array.push("a","y");
-
-       return word_array.join("");
+      // for (var index= 0; word_array[0] !== "a" && word_array[0] !== "e" && word_array[0] !== "i" && word_array[0] !== "o" && word_array[0] !== "u"; index+=1) {
+      //   word_array.push(word_array[0]);
+      //   word_array = word_array.splice(1);
+      // }
+      word_array.push("a","y");
+      return word_array.join("");
     }
 
   }
 //
-//
+//word_array[0] === "a" || word_array[0] ==="e" || word_array[0] === "i" || word_array[0] === "o" ||w ord_array[0] === "u"
 //
 //   else {
 //     return "not a valid";

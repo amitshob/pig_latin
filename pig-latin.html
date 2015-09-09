@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pig-Latin</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pig Latin Converter</h1>
+
+      <form id="pig-latin">
+        <div class="form-group">
+          <h4>Enter the word you want to convert to Pig Latin:</h4>
+          <label for="word"></label>
+          <input class="form-control" id="word" type="text">
+
+        </div>
+
+        <button type="submit" class="btn btn-success">Translate</button>
+      </form>
+
+      <div id="result">
+        <p>The is the pig latin translation -> <span class="result"> </span></p>
+      </div>
+    </div>
+  </body>
+</html>
